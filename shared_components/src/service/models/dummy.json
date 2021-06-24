@@ -1,0 +1,558 @@
+{
+    "docs": [
+        {
+            "_id": "5e3163caf49aae000847d779",
+            "channels": [
+                "WEB"
+            ],
+            "schemaVersion": "v1",
+            "name": "telstra-subscription-1",
+            "status": "ACTIVE",
+            "captureMethod": "WEBCAM",
+            "autoSyncAcceptedIDs": true,
+            "features": {
+                "livenessCheck": true,
+                "authorityCheck": true,
+                "faceScan": true,
+                "voiceScan": true,
+                "dvs": true,
+                "addressVerification": true,
+                "sanctionScreening": true
+            },
+            "dataRetentionPolicy": {
+                "transactionDeletionEnabled": true,
+                "dataDeletionEnabled": true,
+                "period": 5
+            },
+            "subscriptionID": "270684f6-acc1-4e8b-8e4a-5a89396c3eb6",
+            "apiCredentials": {
+                "token": "44331118-a2cd-4256-9790-84d9beb07dda",
+                "activeSecret": "4g[8:agM~6GRh@",
+                "formerSecret": ""
+            },
+            "createdBy": "f1701e88-79d0-484d-8068-3f0944d1f2cd",
+            "createdAt": "2020-01-29T10:51:54.575Z",
+            "updatedAt": "2020-08-10T07:58:32.020Z",
+            "__v": 0,
+            "updatedBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "callBack": {
+                "url": "https://domain.com.au/callback",
+                "token": "2323skdjfku234bjkbdflkj",
+                "activeSecrect": "test@1223"
+            },
+            "identityProofing": [
+                {
+                    "identityFrameworkId": "4242ecfa-91a1-4aca-86a1-b6fdc3c3fc3f",
+                    "name": "Trust ID",
+                    "description": "Australian Trust ID framework which uses multiple combinations of documents to classify individuals into levels 0, 1, 2, 2.5 or 3.",
+                    "level": [
+                        {
+                            "code": "2",
+                            "description": "You will need your driver's licence and passport. If you don't have one of these, you can use your Medicare card and birth certificate instead.",
+                            "faceMatchRequired": true,
+                            "allowLinkingDocument": true,
+                            "additionalDocument": [
+                                {
+                                    "name": "Medicare",
+                                    "category": "LINKING",
+                                    "documentPoints": 0,
+                                    "documentType": {
+                                        "code": "MEDICARE",
+                                        "name": "Medicare",
+                                        "twoSided": true,
+                                        "faceCheck": false,
+                                        "expiryCheck": false
+                                    },
+                                    "country": {
+                                        "name": "Australia",
+                                        "code": "AUS"
+                                    }
+                                }
+                            ],
+                            "supportingDocument": {
+                                "sequence": [
+                                    {
+                                        "order": 1,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "order": 2,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "5e3163caf49aae000847d779"
+        },
+        {
+            "_id": "5e4e13ead74a050008df3d28",
+            "channels": [
+                "WEB"
+            ],
+            "name": "telstra-subscription",
+            "status": "ACTIVE",
+            "schemaVersion": "v1",
+            "captureMethod": "WEBCAM",
+            "features": {
+                "livenessCheck": true,
+                "authorityCheck": true,
+                "faceScan": true,
+                "voiceScan": true,
+                "dvs": true,
+                "addressVerification": true,
+                "sanctionScreening": true
+            },
+            "dataRetentionPolicy": {
+                "transactionDeletionEnabled": true,
+                "dataDeletionEnabled": true,
+                "period": 5
+            },
+            "callbackURL": "https://domain.com.au/callback",
+            "autoSyncAcceptedIDs": true,
+            "subscriptionID": "3329e2bd-0072-4017-a0a8-98bdb98292e6",
+            "apiCredentials": {
+                "token": "c5dfc15e-4281-4b65-983f-0422d466d71b",
+                "activeSecret": "!;K@.XR~VmQ15M",
+                "formerSecret": ""
+            },
+            "createdBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "createdAt": "2020-02-20T05:06:50.239Z",
+            "updatedAt": "2020-08-11T01:36:36.663Z",
+            "__v": 0,
+            "updatedBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "callBack": {
+                "url": "https://domain.com.au/callback",
+                "token": "2323skdjfku234bjkbdflkj",
+                "activeSecrect": "test@1223"
+            },
+            "identityProofing": [
+                {
+                    "identityFrameworkId": "4242ecfa-91a1-4aca-86a1-b6fdc3c3fc3f",
+                    "name": "Trust ID",
+                    "description": "Australian Trust ID framework which uses multiple combinations of documents to classify individuals into levels 0, 1, 2, 2.5 or 3.",
+                    "level": [
+                        {
+                            "code": "2",
+                            "description": "You will need your driver's licence and passport. If you don't have one of these, you can use your Medicare card and birth certificate instead.",
+                            "faceMatchRequired": true,
+                            "allowLinkingDocument": true,
+                            "additionalDocument": [
+                                {
+                                    "name": "Change of name certificate",
+                                    "category": "LINKING",
+                                    "documentPoints": 0,
+                                    "documentOrder": 0,
+                                    "documentType": {
+                                        "code": "CHANGE_OF_NAME_CERTIFICATE",
+                                        "name": "Change of name certificate",
+                                        "twoSided": true,
+                                        "faceCheck": false,
+                                        "expiryCheck": false
+                                    },
+                                    "country": {
+                                        "name": "Australia",
+                                        "code": "AUS"
+                                    }
+                                },
+                                {
+                                    "name": "Marriage certificate",
+                                    "category": "LINKING",
+                                    "documentPoints": 0,
+                                    "documentOrder": 0,
+                                    "documentType": {
+                                        "code": "MARRIAGE_CERTIFICATE",
+                                        "name": "Marriage certificate",
+                                        "twoSided": true,
+                                        "faceCheck": false,
+                                        "expiryCheck": false
+                                    },
+                                    "country": {
+                                        "name": "Australia",
+                                        "code": "AUS"
+                                    }
+                                }
+                            ],
+                            "supportingDocument": {
+                                "sequence": [
+                                    {
+                                        "order": 1,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 1,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 1,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "order": 2,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 2,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 2,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "5e4e13ead74a050008df3d28"
+        },
+        {
+            "_id": "5e59ed656fba1a02d8d067e3",
+            "channels": [
+                "WEB"
+            ],
+            "name": "Dummy-subscription-1",
+            "status": "ACTIVE",
+            "schemaVersion": "v1",
+            "captureMethod": "WEBCAM",
+            "features": {
+                "livenessCheck": true,
+                "voiceRecognition": true,
+                "authorityCheck": false,
+                "faceMatch": true,
+                "addressVerification": false,
+                "sanctionScreening": false
+            },
+            "dataRetentionPolicy": {
+                "transactionDeletionEnabled": true,
+                "dataDeletionEnabled": true,
+                "period": 5
+            },
+            "callbackURL": "http://dummy.restapiexample.com/api/v1/create",
+            "autoSyncAcceptedIDs": true,
+            "subscriptionID": "270684f6-acc1-4e8b-8e4a-5a89395c3eb7",
+            "apiCredentials": {
+                "token": "c5dfc15e-4281-4b65-983f-0422d466d71b",
+                "activeSecret": "!;K@.XR~VmQ15M",
+                "formerSecret": ""
+            },
+            "createdBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "createdAt": "2020-02-20T05:06:50.239Z",
+            "updatedAt": "2020-02-20T05:06:50.239Z",
+            "__v": 0,
+            "id": "5e59ed656fba1a02d8d067e3"
+        },
+        {
+            "_id": "cd61366b-30a4-48d0-9803-d4b86b1ae371",
+            "identityProofing": [
+                {
+                    "identityFrameworkId": "4242ecfa-91a1-4aca-86a1-b6fdc3c3fc3f",
+                    "name": "Trust ID",
+                    "description": "Australian Trust ID framework which uses multiple combinations of documents to classify individuals into levels 0, 1, 2, 2.5 or 3.",
+                    "level": [
+                        {
+                            "code": "2",
+                            "description": "You will need your driver's licence and passport. If you don't have one of these, you can use your Medicare card and birth certificate instead.",
+                            "faceMatchRequired": true,
+                            "allowLinkingDocument": true,
+                            "additionalDocument": [
+                                {
+                                    "name": "Change of name certificate",
+                                    "category": "LINKING",
+                                    "documentPoints": 0,
+                                    "documentOrder": 0,
+                                    "documentType": {
+                                        "code": "CHANGE_OF_NAME_CERTIFICATE",
+                                        "name": "Change of name certificate",
+                                        "twoSided": true,
+                                        "faceCheck": false,
+                                        "expiryCheck": false
+                                    },
+                                    "country": {
+                                        "name": "Australia",
+                                        "code": "AUS"
+                                    }
+                                },
+                                {
+                                    "name": "Marriage certificate",
+                                    "category": "LINKING",
+                                    "documentPoints": 0,
+                                    "documentOrder": 0,
+                                    "documentType": {
+                                        "code": "MARRIAGE_CERTIFICATE",
+                                        "name": "Marriage certificate",
+                                        "twoSided": true,
+                                        "faceCheck": false,
+                                        "expiryCheck": false
+                                    },
+                                    "country": {
+                                        "name": "Australia",
+                                        "code": "AUS"
+                                    }
+                                }
+                            ],
+                            "supportingDocument": {
+                                "sequence": [
+                                    {
+                                        "order": 1,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 1,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 1,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "order": 2,
+                                        "requiredPoints": 20,
+                                        "availableDocument": [
+                                            {
+                                                "name": "Drivers Licence",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 2,
+                                                "documentType": {
+                                                    "code": "DRIVERS_LICENCE",
+                                                    "name": "Drivers Licence",
+                                                    "twoSided": true,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            },
+                                            {
+                                                "name": "Passport",
+                                                "category": "PRIMARY",
+                                                "documentPoints": 20,
+                                                "documentOrder": 2,
+                                                "documentType": {
+                                                    "code": "PASSPORT",
+                                                    "name": "Passport",
+                                                    "twoSided": false,
+                                                    "faceCheck": true,
+                                                    "expiryCheck": true
+                                                },
+                                                "country": {
+                                                    "name": "Australia",
+                                                    "code": "AUS"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "channels": [
+                "WEB"
+            ],
+            "schemaVersion": "v1",
+            "name": "telstra-subscription-ip",
+            "status": "ACTIVE",
+            "callBack": {
+                "url": "https://domain.com.au/callback",
+                "token": "2323skdjfku234bjkbdflkj",
+                "activeSecrect": "test@1223"
+            },
+            "captureMethod": "WEBCAM",
+            "features": {
+                "livenessCheck": true,
+                "authorityCheck": true,
+                "faceScan": true,
+                "voiceScan": true,
+                "dvs": true,
+                "addressVerification": true,
+                "sanctionScreening": true
+            },
+            "dataRetentionPolicy": {
+                "transactionDeletionEnabled": true,
+                "dataDeletionEnabled": true,
+                "period": 5
+            },
+            "subscriptionID": "cd61366b-30a4-48d0-9803-d4b86b1ae371",
+            "apiCredentials": {
+                "token": "04666195-5eaf-4bf4-8e05-f07960537854",
+                "activeSecret": "/(87tcc[4Xty]v",
+                "formerSecret": ""
+            },
+            "createdBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "createdAt": "2020-08-10T08:16:18.096Z",
+            "updatedAt": "2020-08-11T01:38:03.764Z",
+            "__v": 0,
+            "updatedBy": "3f4358db-c9cd-4ee2-afe1-0b7235b1c6a0",
+            "id": "cd61366b-30a4-48d0-9803-d4b86b1ae371"
+        }
+    ],
+    "totalDocs": 4,
+    "limit": 10,
+    "totalPages": 1,
+    "page": 1,
+    "pagingCounter": 1,
+    "hasPrevPage": false,
+    "hasNextPage": false,
+    "prevPage": null,
+    "nextPage": null
+}

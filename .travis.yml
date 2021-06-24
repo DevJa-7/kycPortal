@@ -1,0 +1,42 @@
+os: linux
+language: python
+node_js:
+  - "12"
+python:
+  - "3.6"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - travis_retry pip install --upgrade pip
+  - travis_retry pip install --upgrade awscli
+
+jobs:
+  include:
+    - stage: Deploy
+      if: branch = master AND type = push
+      script:
+        - nvm install 12.19.0
+        - node -v
+        - npm -v
+        - aws s3 cp --recursive --acl public-read ./shared_components/src/assets s3://static.au.dev.truuth.id/portal
+        - aws s3 cp --recursive --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./domain_redirect/ s3://client.au.dev.truuth.id --exclude "Readme.md"
+        - cd truuth_admin
+        - yarn
+        - yarn build
+        - mkdir -p ./dist
+        - cp -r ./build/ ./dist/kyc/
+        - aws s3 rm s3://kyc.console.au.dev.truuth.id/ --recursive
+        - aws s3 cp --recursive --acl public-read ./dist s3://kyc.console.au.dev.truuth.id/
+        - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./dist/kyc/index.html s3://kyc.console.au.dev.truuth.id/
+        - cd ..
+        - cd truuth_client
+        - yarn
+        - yarn build
+        - mkdir -p ./dist
+        - cp -r ./build/ ./dist/kyc/
+        - aws s3 rm s3://kyc.client.au.dev.truuth.id/ --recursive
+        - aws s3 cp --recursive --acl public-read ./dist s3://kyc.client.au.dev.truuth.id/
+        - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./dist/kyc/index.html s3://kyc.client.au.dev.truuth.id/
